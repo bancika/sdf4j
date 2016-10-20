@@ -27,24 +27,13 @@
 		</copy>
 	</target>
 
-	<target name="lib.copy">
-		<copy todir="${jar.dir}/lib" overwrite="true">
-			<fileset dir="${basedir}/lib">
-				<exclude name="**/*dll" />
-			</fileset>
-		</copy>
-		<copy todir="${jar.dir}" overwrite="true">
-			<fileset dir="${basedir}/lib/" includes="**/*.dll" />
-		</copy>
-	</target>
-
 	<path id="class.path">
 		<fileset dir="${basedir}">
 			<include name="lib/**/*.jar" />
 		</fileset>
 	</path>
 
-	<target name="jar" depends="clean, lib.copy, resource.copy, compile">
+	<target name="jar" depends="clean, resource.copy, compile">
 		<jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}" />
 	</target>
 
