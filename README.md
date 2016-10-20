@@ -13,7 +13,7 @@ Should you need something that's missing feel free to extend the library or requ
 
 SDF4J is NOT a drawing library and cannot be used on its own, without having an implementation for some external library such as AWT Graphic2D, Android, GWT, OpenGL...
 
-<h3>How does it work?</h3>
+## How does it work?
 The main part of the project is located in <b>sdf4j-core</b> project. It contains the SDF4J API and is not platform dependent, so it can be used in drawing applications regardless of their platform. The API strongly resembles AWT Graphics2D API to make converting existing application written for AWT Graphics2D relatively painless. In addition to this library, you will need a concrete implementation of SDF4J for each platform you want to run your application on (see the next section for the full list). In case it doesn't already exist, feel free to extend the library by writing the implementation for a new platform. Please note that any changes made in the core should be propagated to all concrete implementations to keep the whole project up to date and working.
 
 ## Existing implementations
